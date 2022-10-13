@@ -1,15 +1,22 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <GraphArea
+      server-url="bolt://44.198.170.209:7687"
+      server-user="neo4j"
+      server-password="launcher-sleds-darts"
+      cypher="call db.schema.visualization()"/>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import GraphArea from "@/components/GraphArea";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    GraphArea
   }
 }
 </script>
