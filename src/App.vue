@@ -9,13 +9,11 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import GraphArea from "@/components/GraphArea";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
     GraphArea
   }
 }
