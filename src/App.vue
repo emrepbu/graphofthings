@@ -1,11 +1,10 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <img id="app-logo" alt="Vue logo" src="./assets/logo.png">
   <GraphArea
       server-url="bolt://44.198.170.209:7687"
       server-user="neo4j"
       server-password="launcher-sleds-darts"
-      cypher="call db.schema.visualization()"/>
+      cypher="CALL db.schema.visualization()"/>
 </template>
 
 <script>
@@ -27,5 +26,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+#app-logo {
+  width: 100px;
+  height: 100px;
 }
 </style>
