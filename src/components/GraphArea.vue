@@ -1,5 +1,4 @@
 <template>
-  <h1>Neovis.js Simple Example</h1>
   <form>
     <fieldset>
       <legend>Query Neo4j</legend>
@@ -18,21 +17,16 @@
       <input type="password"
              placeholder=""
              id="passwordField">
-
       <br>
       <label for="cypherField">Cypher</label>
       <textarea rows="10" cols="80"
                 placeholder="MATCH (n) RETURN n LIMIT 10"
-                id="cypherField">
-
-              </textarea>
-
+                id="cypherField"/>
       <br>
       <button class="draw-button" type="button" v-on:click="drawGraph">Query</button>
     </fieldset>
   </form>
   <div id="viz"/>
-
 </template>
 
 <script>
@@ -68,6 +62,7 @@ export default {
 
 <style scoped>
 #viz {
+  margin-top: 3em;
   width: 20em;
   height: 20em;
   border: 1px solid lightgray;
