@@ -1,7 +1,37 @@
 <template>
   <h1>Neovis.js Simple Example</h1>
+  <form>
+    <fieldset>
+      <legend>Query Neo4j</legend>
+
+      <label for="boltField">Bolt Host URL</label>
+      <input type="text"
+             placeholder="d7ade437.databases.neo4j.io"
+             id="boltField">
+      <br>
+      <label for="usernameField">Username</label>
+      <input type="text"
+             placeholder="neo4j"
+             id="usernameField">
+      <br>
+      <label for="passwordField">Password</label>
+      <input type="password"
+             placeholder=""
+             id="passwordField">
+
+      <br>
+      <label for="cypherField">Cypher</label>
+      <textarea rows="10" cols="80"
+                placeholder="MATCH (n) RETURN n LIMIT 10"
+                id="cypherField">
+
+              </textarea>
+
+      <br>
+      <button class="draw-button" type="button" v-on:click="drawGraph">Query</button>
+    </fieldset>
+  </form>
   <div id="viz"/>
-  <button v-on:click="drawGraph" class="draw-button" role="button">Draw </button>
 
 </template>
 
@@ -64,7 +94,7 @@ export default {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  margin: 50px;
+  margin: 25px;
 }
 
 .draw-button:hover {
